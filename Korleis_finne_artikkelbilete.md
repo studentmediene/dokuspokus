@@ -66,7 +66,7 @@ La oss seie me vil finne eit bilete til ein artikkel om fitta til Trond Giske. D
 
 **5. Me les oss igjennom sida om biletet, og finn et avsnitt om “licensing” (kan ha andre navn andre stader).**
 
-![Vi finner lisensieringsseksjonen på bildesiden!](/images/LicensingFantRettighetanTeGiske.png)
+![Vi finner lisensieringsseksjonen på bildesiden!](/images/FantRettighetanTeGiske.png)
 
 **6. Her finner me ut at me kan bruke biletet, så lenge me akkrediterer biletet til “Johannes Jansson/norden.org”**
 
