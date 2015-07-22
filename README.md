@@ -16,15 +16,52 @@ Deretter kan du installere pakker ved å trykke `ctrl+shift+p` og skrive *instal
 
 Installer følgende utvidelser(følg instruksjonene på packagecontrol.io-sidene):
 
-* [Git](https://packagecontrol.io/packages/Git)
-* [Git​Gutter](https://packagecontrol.io/packages/GitGutter)
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 * [Markdown​Editing](https://packagecontrol.io/packages/MarkdownEditing)
-* [Predawn](https://packagecontrol.io/packages/Predawn)
+* [Afterglow](https://packagecontrol.io/packages/Theme%20-%20Afterglow)
 
-Restart Sublime etter at utvidelesene er installert.
+Gå til `Preferences -> Settings - User` og erstatt alt der med følgende følgende:
 
-Det anbefales også å benytte en terminal-versjon av git, men det er ikke nødvendig (Git Bash eksister til windows, terminalen funger utmerket i Linux og OSX)
+```
+{
+	"caret_extra_width": 1,
+	"theme": "Afterglow.sublime-theme",
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+	"tabs_medium": true,
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"word_wrap": true
+}
+```
+
+Restart Sublime.
+
+
+## Installer Git
+Installer Git (Git Bash om du er på windows).
+
+### Windows
+Installer [Git Bash](https://git-scm.com/downloads).
+
+## Sett opp Git
+
+* Åpne git (git bash om du er på windows). Naviger til hjemmemappen din: `cd ~`.
+* Klon denne repositoryen: `git clone https://github.com/RadioRevolt/dokuspokus.git`
+* Naviger til repositoryen du nettopp klona `cd dokuspokus`
+
+## Bruke Git
+
+* Ny branch: `git checkout -b "<navn-på-branch>"`
+* Commite filer til branchen din: `git commit -a -m "<hvilke endringer har du gjort?>"`
+* Dytte endringene (commitsene) dine til github: `git push origin <navnet-på-branchen-din>`
 
 ## Å skrive dokumentasjon
 Dokumentasjonen skrives med markdownsyntaks. Referanse kan du finne [her](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
