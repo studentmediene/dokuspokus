@@ -1,7 +1,7 @@
 #Korleis skrive produsentmail
 *Skrive av Hans Ystanes & Kris Monsen, 1. Mars 2015*
 
-//Bilde av forsamling
+![Amper generalforsamling av produsenter](/images/DeclarationSigning.jpg)
 
 Etter kvar sending skal ein sende ein produsentmail. I den skal det stå tre hovedpunkt: 
 * Om noko gjekk gale, eller det oppsto nokre problem som de treng oppfølging på. 
@@ -17,4 +17,4 @@ Om programmet ditt ikkje kan ha sending denne veka, sendes ein reprisemail istad
 Ein må ikkje vere produsent for å sende produsentmail, tvert imot kan det vere ekstra kos og noko å skryte om til tidlegare nevmte mor om ein tilbyr seg å skrive produsentmail for produsenten. Einaste krav er at du var med på sendinga.
 
 ###Eit (fiktivt) døme på korleis ein produsentmail kan sjå ut:
-//Dømet
+![Eksempelet](/images/EksempelProdusentmail.png)
