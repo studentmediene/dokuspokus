@@ -25,21 +25,21 @@ Du kan lære meir om *creative commons* og markeringen på [creativecommons.org]
 
 ###Nokre startpunkt
 Det finnes ei rekkje sider kor det ofte legges ut bilder markert for kommersielt gjenbruk:
-+[Samfundets fotoarkiv](http://foto.samfundet.no/) (Alt her kan brukast så lengde det akkrediteres)
-+[Freepy](http://www.freeepy.com/)
-+[Wikimedia Commons](http://commons.wikimedia.org/wiki/Main_Page)
-+[Raumrot](http://www.raumrot.com/)
-+[Jaymantri](http://jaymantri.com/)
-+[ISO Republic](http://isorepublic.com/)
-+[The Stocks](http://thestocks.im/)
-+[Unsplash](https://unsplash.com/)
-+[Splitshire](http://www.splitshire.com/)
-+[Kaboom pics](http://kaboompics.com/)
-+[Gratisography](http://www.gratisography.com/)
-+[Picjumbo](http://picjumbo.com/)
-+[Stockphotos](http://stockphotos.io/)
-+[Photopin](http://photopin.com/)
-+Det finnes sjølvsagt fleire.
+* [Samfundets fotoarkiv](http://foto.samfundet.no/) (Alt her kan brukast så lengde det akkrediteres)
+* [Freepy](http://www.freeepy.com/)
+* [Wikimedia Commons](http://commons.wikimedia.org/wiki/Main_Page)
+* [Raumrot](http://www.raumrot.com/)
+* [Jaymantri](http://jaymantri.com/)
+* [ISO Republic](http://isorepublic.com/)
+* [The Stocks](http://thestocks.im/)
+* [Unsplash](https://unsplash.com/)
+* [Splitshire](http://www.splitshire.com/)
+* [Kaboom pics](http://kaboompics.com/)
+* [Gratisography](http://www.gratisography.com/)
+* [Picjumbo](http://picjumbo.com/)
+* [Stockphotos](http://stockphotos.io/)
+* [Photopin](http://photopin.com/)
+* Det finnes sjølvsagt fleire.
 
 ###Søke etter lovlege bilete
 Det går og an å google seg fram til bilete, men då er det VELDIG VIKTIG at ein sjekker at bileta er markert for kommersielt gjenbruk, pluss at ein ALLTID skal oppgi kor ein hentar bilete frå. 
