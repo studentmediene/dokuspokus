@@ -2,6 +2,8 @@
 *Skrevet av Awa Sarr, redaksjonssjef 2014*  
 *Redigert av Kris Monsen, radioredaktør 2015*  
 
+![Radio Revolt](/images/RadioRevoltLogo.jpg)
+
 *Alle medlemmer i Radio Revolt og evt andre brukere av Radio Revolts studioer skal være kjent med denne instruksen. Trossing av instruksen kan i verste fall føre til inndragelse av lucasbrikke og gjengkort.*
 
 Det som er skrevet med uthevet skrift er ting som dere **må** gjøre, resten er ment som retningslinjer.
