@@ -1,6 +1,6 @@
 #Instruks for Radio Revolt
-###*Skrevet av Awa Sarr, redaksjonssjef 2014*  
-###*Redigert av Kris Monsen, radioredaktør 2015*  
+*Skrevet av Awa Sarr, redaksjonssjef 2014*  
+*Redigert av Kris Monsen, radioredaktør 2015*  
 
 *Alle medlemmer i Radio Revolt og evt andre brukere av Radio Revolts studioer skal være kjent med denne instruksen. Trossing av instruksen kan i verste fall føre til inndragelse av lucasbrikke og gjengkort.*
 
