@@ -16,7 +16,7 @@ I tillegg til å finne eit bilete markert for kommersielt gjenbruk, er det kjemp
 ###Creative Commons
 Ein rettigheitsstandard som brukast hyppig på nettet er *Creative Commons*, som tilbyr innhaldsskaparar ikoner for å markere kva innhaldet deira kan brukast til.
 
-//Bilde 2 -- Creative Commons eksempler
+![Hvilke Creative Commons anmerkninger kan vi bruke?](/images/CreativeCommonsIkoner.jpg)
 
 Du kan lære meir om *creative commons* og markeringen på [creativecommons.org](http://creativecommons.org/), eller trykke på *creative commons*-ikonet hvis det er tilstade på biletesida. **Les alltid gjennom betingelsene, og sjå om skaparen har nokre krav (nokon ønsker til dømes å få ein epost om kvar det brukast, slik at vedkommende kan skryte av det)**.
 
@@ -50,26 +50,26 @@ La oss seie me vil finne eit bilete til ein artikkel om fitta til Trond Giske. D
 
 **1. Start ved å gå til [http://images.google.com](http://images.google.com), og tast inn “Trond Giske” i søkefeltet.**
 
-//Bilde 3 - google Trond Giske
+![Google Giske](/images/SøkGiske.png)
 
 **2. Trykk på “Innstillinger for søket”**
 
-//Bilde 4 - Innstillinger for søket
+![Innstillinger for søket](/images/InnstillingerForGiske.png)
 
 **3. Trykk deretter “Bruksrettigheter”, og vel “markert for gjenbruk”. Du får då opp bilete som du mest sannsynleg kan bruke (men det må fortsatt bekreftast).**
 
-//Bilde 5 - Bruksrettigheter og markert for gjenbruk
+![Bruksrettigheter og markert for gjenbruk](/images/GiskeTilGjenbruk.png)
 
 **4. Me velger eit bilete av Trond Giske me synes passar, og trykker på det. Trykk deretter “besøk sida”, ikkje “sjå biletet”, då det er lettare å finne bileterettigheiter på denne måten.**
 
-//Bilde 6 - Besøk siden med bildet av Trond Giske
+![Trykk besøk siden](/images/MenKorEFittaTeGiske.png)
 
 **5. Me les oss igjennom sida om biletet, og finn et avsnitt om “licensing” (kan ha andre navn andre stader).**
 
-//Bilde 7 - Licensing
+![Vi finner lisensieringsseksjonen på bildesiden!](/images/LicensingFantRettighetanTeGiske.png)
 
 **6. Her finner me ut at me kan bruke biletet, så lenge me akkrediterer biletet til “Johannes Jansson/norden.org”**
 
-//Bilde 8 - closeup licensing
+![Hva ser vi etter i lisensieringsinfo?](/images/GodkjentGiske.png)
 
 Då er det berre å laste ned biletet til maskina, og så laste det opp til bildebehandlaren i Chimera. **Husk akkreditering og evt. andre krav ifrå innholdsskapar.**
