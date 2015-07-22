@@ -1,5 +1,5 @@
 #Instruks for Radio Revolt
-*Skrevet av Awa Sarr, redaksjonssjef 2014*  
+*Skrevet av Awa Sarr, redaksjonssjef 2014*   
 *Redigert av Kris Monsen, radioredaktør 2015*  
 
 ![Radio Revolt](/images/RadioRevoltLogo.jpg)
