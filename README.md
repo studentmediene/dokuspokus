@@ -44,6 +44,18 @@ Gå til `Preferences -> Settings - User` og erstatt alt der med følgende følge
 
 Restart Sublime.
 
+Lag en .md-fil. Mens du har filen åpen gå til `Preferences -> Settings - More -> Syntax Specific  - User`. Da burde en fil som heter "Markdown.sublime-settings". Lim inn føgende der:
+
+```
+{
+    "color_scheme": "Packages/Theme - Afterglow/Afterglow-markdown.tmTheme",
+    "draw_centered": true,
+    "draw_indent_guides": false,
+    "trim_trailing_white_space_on_save": false,
+    "word_wrap": true,
+    "wrap_width": 80  // Sets the # of characters per line
+}
+```
 
 ## Installer Git
 Installer Git (Git Bash om du er på windows).
