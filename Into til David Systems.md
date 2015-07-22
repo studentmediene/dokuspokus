@@ -20,7 +20,7 @@ Dette er *databaseprogrammet* vårt. Her finner du all musikken vår, alle de ti
 
 Øvest til venstre finner du *valgmenyen*. Der kan du velge hva du vil se.
 
-![Digas meny](images/digas-menu-left.png)
+![Digas meny](images/digas-left-menu.png)
 
 I "Musikkarkivet" vårt finner du for eksempel all musikken vår. I "Sendinger" ligger alle tidligere sendinger. 
 
@@ -28,7 +28,7 @@ Rett over valgmenyen finner du en nedtrekksmeny. Den står somregel på "Standar
 
 Rett under valgmenyen finner du et valgtre. Der kan du finne samlinger av litt diverse ting. Under "Category" finner du f.eks. A- og B-listene våre.
 
-![Digas valgte](images/digas-menu-left.png)
+![Digas valgte](images/digas-left-tree-map.png)
 
 ### Opptak
 Opptak gjøres ved å trykke på den rød mikrofonknappen i menyen øvert.
@@ -37,7 +37,7 @@ Opptak gjøres ved å trykke på den rød mikrofonknappen i menyen øvert.
 
 Deretter trykker du på record-knappen for å klargjøre opptaket, og play-knappen for å starte opptaket. Når opptaket er ferdig trykker du på stopp-knappen for å stoppe opptaket. Du kan nå høre på opptaket ved å trykke på play-knappen.
 
-![Digas opptak](images/digas-record-windows.png)
+![Digas opptak](images/digas-record-window.png)
 
 Hvis du er fornøyd med opptaket fyller du inn tittel, finner deg selv i nedtrekksmenyen under "Author" og trykker på OK for å lagre.
 
@@ -48,16 +48,16 @@ Velg først "Musikkarkiv" i valgmenyen til venstre. Gå så til `Entry -> Import
 
 Fyll inn info om sangen du nettopp la inn.
 
-![Digas entry](images/digas-new-entry-music1)
+![Digas entry](images/digas-new-entry-music1.png)
 
 Bytt til fanen "Music2" for å sette into- og utrotid. Trykk på edit for å komme til en bedre editor, der du kan sette disse parameterene mer nøyaktig.
 
-![Digas entry](images/digas-new-entry-music2)
+![Digas entry](images/digas-new-entry-music2.png)
 
 Pass også på at mark-in og mark-out er satt til når sangen faktisk starter og slutter, så det er ikke blir lange perioder på starten og sluytten av sangen der det bare er stille.
 
-![Digas entry](images/digas-new-entry-out)
+![Digas entry](images/digas-new-entry-out.png)
 
 Trykk til slutt på OK for å lagre.
 
-![Digas entry](images/digas-new-entry-save)
+![Digas entry](images/digas-new-entry-save.png)
