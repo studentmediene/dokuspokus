@@ -1,7 +1,7 @@
 #Korleis finne det perfekte, lovlige artikkelbilete
 *Skrive av Hans Ystanes & Kris Monsen, 1. Mars 2015*
 
-//Bilde 1 her -- paperstack
+![Så mye lovlig drit](/images/Fotohaug.jpg)
 
 ###Kvifor
 For kvart bilete me bruker på Studentmedienes nettsider (inkludert [radiorevolt.no](radiorevolt.no)) som me ikkje har rettigheiter til, kan me få et betalingskrav for 20 000 kroner. Me vil heller kjøpe fint nytt utstyr til ~~radiofunkane~~ Radio Revolt, bruke penger på vedlikehald og betale utgifter. Derfor er det viktig at me kun bruker bilete me har lov til å bruke. 
