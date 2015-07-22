@@ -20,7 +20,7 @@ Dette er *databaseprogrammet* vårt. Her finner du all musikken vår, alle de ti
 
 Øvest til venstre finner du *valgmenyen*. Der kan du velge hva du vil se.
 
-![Digas meny](images/digas-left-menu.png)
+![Digas meny](images/digas-left-menu.PNG)
 
 I "Musikkarkivet" vårt finner du for eksempel all musikken vår. I "Sendinger" ligger alle tidligere sendinger. 
 
@@ -28,7 +28,7 @@ Rett over valgmenyen finner du en nedtrekksmeny. Den står somregel på "Standar
 
 Rett under valgmenyen finner du et valgtre. Der kan du finne samlinger av litt diverse ting. Under "Category" finner du f.eks. A- og B-listene våre.
 
-![Digas valgte](images/digas-left-tree-map.png)
+![Digas valgte](images/digas-left-tree-map.PNG)
 
 ### Opptak
 Opptak gjøres ved å trykke på den rød mikrofonknappen i menyen øvert.
