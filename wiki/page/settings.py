@@ -37,6 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'wiki',
+    'django_markdown',
+    'whoosh',
+    'haystack',
+    'reversion',
+    'reversion_compare',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +107,32 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
+
+# Markdown
+
+MARKDOWN_EXTENSIONS = ['extra', 'wikilinks', 'toc']
+MARKDOWN_EXTENSION_CONFIGS = {
+    'toc': {
+        'separator': '-',
+        'title': 'Innhold',
+        'baselevel': 2,
+    },
+    'wikilinks': {
+        'base_url': '/view/',
+        'end_url': '.html',
+    },
+}
+
+# Haystack
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh/'),
+    },
+}

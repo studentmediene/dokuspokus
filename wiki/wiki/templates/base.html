@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head lang="no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static STATIC_URL %}style.css">
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <title>Radio Revolt - Wiki</title>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+
+  <nav class="navigation">
+    <div class="logo">
+      <div style="width: 150px; height: 200px; background-color: grey;text-align: center;">
+        <span style="margin-top: 80px;">Logo</span>
+      </div>
+      <!--
+      <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=150%C3%97200&w=150&h=200" />
+      -->
+    </div>
+    <ul>
+      <li>Nyttige Linker</li>
+      <li><a href="{% url 'home_page' %}">Hjem</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    <ul>
+      <li>Andre Linker</li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </nav>
+
+  <div class="body-wrapper">
+
+    <header class="header">
+      <h1><a href="{% url 'home_page' %}">Radio Revolt Wiki</a></h1>
+    </header>
+
+    <div class="markdown-body">
+      {% block content %}{% endblock %}
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    Footer
+  </footer>
+
+</body>
+</html>

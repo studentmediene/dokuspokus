@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Logg inn</h1>
+
+{% if form.errors %}
+  <div class="admonition danger">
+    <p>Galt brukernavn eller passord</p>
+  </div>
+{% endif %}
+
+{% if user.is_authenticated %}
+  <p>Du er alerede logget inn som: {{ user.username }}</p>
+  <p><a href="{% url 'logout_user' %}">Logout</a></p>
+{% else %}
+  <form method="post" action="{% url 'login_user' %}">
+    {% csrf_token %}
+    {{ form.username }}<br />
+    {{ form.password }}<br />
+    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="submit" value="Logg inn" />
+  </form>
+{% endif %}
+
+{% endblock %}

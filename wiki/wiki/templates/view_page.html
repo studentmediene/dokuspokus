@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load django_markdown %}
+
+{% block head %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+
+{% block content %}
+  <h1>
+    {{ page_title|title }}
+    <span id="edit">
+      [ <a href="{% url 'edit_page' page.get_url %}">Rediger</a> | <a href="#}">Historie</a> ]
+    </span>
+  </h1>
+  {{ page.content|markdown }}
+{% endblock %}

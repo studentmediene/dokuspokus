@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static STATIC_URL %}prism.css">
+<link rel="stylesheet" href="{% static STATIC_URL %}mdedit.css">
+
+<script src="{% static STATIC_URL %}prism-all.js"></script>
+<script src="{% static STATIC_URL %}mdedit.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1>{{ page_title|title }} - {% if page %}Rediger{% else %}Opprett{% endif %}</h1>
+<pre id="content" name="content">{{ page.content }}</pre>
+<form method="post" id="edit-form" action="{% url 'save_page' slug %}">
+  {% csrf_token %}
+  <input type="submit" value="Lagre" />
+</form>
+<a href="{% url 'view_page' slug %}">Avbryt</a>
+
+<script>
+  var editor = mdEdit(document.querySelector("pre#content"), {});
+
+  $("#edit-form").submit( function(eventObj) {
+      $('<input />').attr('type', 'hidden')
+        .attr('name', "content")
+        .attr('value', editor.getValue())
+        .appendTo(this);
+      return true;
+    });
+</script>
+{% endblock %}
