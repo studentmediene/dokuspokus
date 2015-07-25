@@ -1,4 +1,5 @@
 *.pyc
-*.db
+*.DS_Store
+*.sqlite3
 migrations/
 venv/
