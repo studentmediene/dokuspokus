@@ -66,6 +66,28 @@ body {
   padding: .5rem;
 }
 
+.markdown-body form#edit-form input {
+}
+
+.markdown-body pre.highlight {
+  border: 1px solid gray;
+  border-radius: 0;
+  background-color: white;
+  color: gray;
+}
+
+.markdown-body pre.highlight del {
+  text-decoration: none;
+  background-color: #FFE6E6;
+  color: black;
+}
+
+.markdown-body pre.highlight ins {
+  text-decoration: none;
+  background-color: #E6FFE6;
+  color: black;
+}
+
 .markdown-body {
   border-left: 1px solid gray;
   -webkit-text-size-adjust: 100%;

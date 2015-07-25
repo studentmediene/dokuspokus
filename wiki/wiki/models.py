@@ -12,7 +12,7 @@ class Page(models.Model):
         return '%s' % self.slug
 
     def __str__(self):
-        return self.slug.encode('utf8')
+        return '%s' % self.slug.replace('_', ' ')
 
     def get_url(self):
         return '%s' % self.slug

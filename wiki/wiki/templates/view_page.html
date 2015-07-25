@@ -12,7 +12,7 @@
   <h1>
     {{ page_title|title }}
     <span id="edit">
-      [ <a href="{% url 'edit_page' page.get_url %}">Rediger</a> | <a href="#}">Historie</a> ]
+      [ <a href="{% url 'edit_page' page.get_url %}">Rediger</a> | <a href="{% url 'page_history' page.get_url %}">Historikk</a> ]
     </span>
   </h1>
   {{ page.content|markdown }}

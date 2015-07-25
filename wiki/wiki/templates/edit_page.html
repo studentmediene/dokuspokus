@@ -11,6 +11,9 @@
 
 {% block content %}
 <h1>{{ page_title|title }} - {% if page %}Rediger{% else %}Opprett{% endif %}</h1>
+<a href="{% url 'view_page' slug %}">&#8592; Tilbake</a>
+<br />
+<br />
 <pre id="content" name="content">{{ page.content }}</pre>
 <form method="post" id="edit-form" action="{% url 'save_page' slug %}">
   {% csrf_token %}
