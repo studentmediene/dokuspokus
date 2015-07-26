@@ -66,7 +66,23 @@ body {
   padding: .5rem;
 }
 
-.markdown-body form#edit-form input {
+.markdown-body .button {
+  background: #FFF;
+  color: inherit;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  padding: 6px 12px;
+  font-size: 1rem;
+}
+
+.markdown-body .button:hover {
+  background: #EEE;
+  text-decoration: none;
+  cursor: default;
+}
+
+.markdown-body form#edit-form input.button{
+  float: right;
 }
 
 .markdown-body pre.highlight {
