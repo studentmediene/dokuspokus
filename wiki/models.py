@@ -56,5 +56,5 @@ class LinkGroup(models.Model):
         return '%s' % self.title
 
     class Meta:
-        verbose_name = 'Ling Group'
+        verbose_name = 'Link Group'
         verbose_name_plural = 'Link Groups'
