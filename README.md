@@ -140,7 +140,7 @@ Lag en virtual host til wikien:
                 Require all granted
         </Directory>
 
-        WSGIDaemonProcess wiki.radiorevolt.no user=homepage group=homepage processes=1 threads=15 maximum-requests=10000 python-path=/srv/dokuspokus/venv/lib/python3.4/site-packages python-eggs=/srv/dokuspokus/run/eggs
+        WSGIDaemonProcess wiki.radiorevolt.no user=dokuspokus group=dokuspokus processes=1 threads=15 maximum-requests=10000 python-path=/srv/dokuspokus/venv/lib/python3.4/site-packages python-eggs=/srv/dokuspokus/run/eggs
         WSGIProcessGroup wiki.radiorevolt.no
         WSGIScriptAlias / /srv/dokuspokus/apache/conf/wsgi.py
 
