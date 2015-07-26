@@ -115,6 +115,25 @@ body {
     outline: none;
 }
 
+.markdown-body ul.search-results {
+  list-style-type: none;
+}
+
+.markdown-body ul.search-results li {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.markdown-body ul.search-results li a{
+  color: inherit;
+}
+
+.markdown-body ul.search-results li span.created{
+  color: gray;
+  font-size: 1rem;
+}
+
+
 /* -------- */
 
 .markdown-body {
