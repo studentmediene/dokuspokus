@@ -3,4 +3,5 @@
 *.sqlite3
 migrations/
 venv/
+whoosh/
 __pycache__/
