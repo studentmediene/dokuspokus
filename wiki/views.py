@@ -43,22 +43,22 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 return redirect(site)
-    else:
-        link_groups = LinkGroup.objects.all()
-        form = AuthenticationForm(request)
-        form.fields['username'].widget.attrs.update({
-                'placeholder': 'username'
-            })
-        form.fields['password'].widget.attrs.update({
-                'placeholder': 'password'
-            })
-        site = request.GET.get('next', '/')
-        return render(request, 'login.html', {
-                      'form': form,
-                      'next': site,
-                      'request': request,
-                      'link_groups': link_groups,
-                      })
+
+    link_groups = LinkGroup.objects.all()
+    form = AuthenticationForm(request)
+    form.fields['username'].widget.attrs.update({
+            'placeholder': 'brukernavn'
+        })
+    form.fields['password'].widget.attrs.update({
+            'placeholder': 'passord'
+        })
+    site = request.GET.get('next', '/')
+    return render(request, 'login.html', {
+                  'form': form,
+                  'next': site,
+                  'request': request,
+                  'link_groups': link_groups,
+                  })
 
 
 def logout_user(request):
