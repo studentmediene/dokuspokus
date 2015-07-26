@@ -18,6 +18,7 @@ def home_page(request):
 
 def view_page(request, slug):
     link_groups = LinkGroup.objects.all()
+    slug = slug.lower()
     try:
         page = Page.objects.get(slug=slug)
         return render(request, 'view_page.html', {
