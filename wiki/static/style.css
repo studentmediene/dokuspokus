@@ -49,6 +49,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3rem;
+  margin-top: 1rem;
 }
 
 .header h1 a {
