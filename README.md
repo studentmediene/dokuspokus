@@ -41,8 +41,9 @@ Det burde nå fungere å kjøre den med `python manage.py runserver`.
 ## Deploy
 Vil helst ikke deploye med `python manage.py runserver`. Bedre å bruke apache til
 å serve.
-
 Her brukers Apache med mod_wsgi for å deploye. Andre alternativer finnes, men dette er den enkleste.
+
+Alle kommandoer og filer er kun veiledene.
 
 Installer mod_wsgi:
 
@@ -66,12 +67,14 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = '/srv/dokuspokus/apache/static/'
 ```
 
-Opprett følgende mapper (legg dem gjerne til i .gitignore):
+Opprett mapper til apache-ting (legg dem gjerne til i .gitignore):
 
-* `/srv/dokuspokus/apache/static/`
-* `/srv/dokuspokus/apache/logs/`
-* `/srv/dokuspokus/apache/conf/`
-* `/srv/dokuspokus/run/eggs/`
+```
+mkdir /srv/dokuspokus/apache/static/
+mkdir /srv/dokuspokus/apache/logs/
+mkdir /srv/dokuspokus/apache/conf/
+mkdir /srv/dokuspokus/run/eggs/
+```
 
 Opprett to log-filer:
 
@@ -149,3 +152,11 @@ Lag en virtual host til wikien:
 
 </VirtualHost>
 ```
+
+Restart apache:
+
+```
+~$ service apache2 restart
+```
+
+Wikien burde nå være oppe og gå på wiki.radiorevolt.no
