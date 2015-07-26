@@ -51,7 +51,7 @@ def login_user(request):
         form.fields['password'].widget.attrs.update({
                 'placeholder': 'password'
             })
-        site = request.GET.get('next', '/manage')
+        site = request.GET.get('next', '/')
         return render(request, 'login.html', {
                       'form': form,
                       'next': site,

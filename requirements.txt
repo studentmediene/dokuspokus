@@ -3,7 +3,6 @@ django-haystack==2.4.0
 django-markdown==0.8.4
 django-reversion==1.8.7
 django-reversion-compare==0.5.4
-haystack==0.15
 Markdown==2.6.2
 python-ptrace==0.8.1
 six==1.9.0
