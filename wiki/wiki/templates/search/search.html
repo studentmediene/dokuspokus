@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <ul class="search-results">
+  {% for result in page.object_list %}
+    <li>
+      <a href="{% url 'view_page' result.object.get_url %}">{{ result.object.title }}</a>
+      <span class="created">
+        ({{ result.object.created|date:'d/m/y' }})
+      </span>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}

@@ -15,13 +15,20 @@
 
   <nav class="navigation">
     <div class="logo">
-      <div style="width: 150px; height: 200px; background-color: grey;text-align: center;">
+      <div style="width: 92%; height: 200px; background-color: grey;text-align: center;">
         <span style="margin-top: 80px;">Logo</span>
       </div>
       <!--
       <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=150%C3%97200&w=150&h=200" />
       -->
     </div>
+
+    <div class="search">
+      <form method="get" action="/search/">
+        <input name="q" type="text" placeholder="Søk..." />
+      </form>
+    </div>
+
     <ul>
       <li>Nyttige Linker</li>
       <li><a href="{% url 'home_page' %}">Hjem</a></li>

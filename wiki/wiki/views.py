@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from haystack.management.commands import update_index
 from wiki.models import Page
 from django.http import JsonResponse
 import reversion
@@ -20,7 +21,6 @@ def view_page(request, slug):
         page = Page.objects.get(slug=slug)
         return render(request, 'view_page.html', {
                       'page': page,
-                      'page_title': slug.replace('_', ' ')
                       })
     except Page.DoesNotExist:
         return render(request, 'create_page.html', {
@@ -68,24 +68,6 @@ def page_history(request, slug):
     page = Page.objects.get(slug=slug)
     version_list = reversion.get_unique_for_object(page)
 
-    """
-    version_id = int(request.GET.get('id', -1))
-    if version_id >= 0:
-        if version_id + 1 >= len(version_list):
-            compare = ''
-        else:
-            compare = version_list[version_id + 1].field_dict['content']
-
-        html = reversion_compare.helpers.html_diff(version_list[version_id].field_dict['content'],
-                                                   compare)
-        return render(request, 'page_history_diff.html', {
-                      'page': page,
-                      'slug': slug,
-                      'page_title': slug.replace('_', ' '),
-                      'html': html,
-                      })
-    """
-
     changelog = list()
     for i in range(len(version_list)):
         if i < len(version_list) - 1:
@@ -106,7 +88,6 @@ def page_history(request, slug):
     return render(request, 'page_history.html', {
                   'page': page,
                   'slug': slug,
-                  'page_title': slug.replace('_', ' '),
                   'changelog': changelog,
                   })
 
@@ -121,8 +102,6 @@ def page_change(request, slug, version_id):
 
     page = Page.objects.get(slug=slug)
     version_list = reversion.get_unique_for_object(page)
-
-    # version_id = len(reversion.get_unique_for_object(page)) - version_id - 1
 
     try:
         if version_id + 1 >= len(version_list):
@@ -162,4 +141,5 @@ def save_page(request, slug):
         if content == '':
             return redirect('/edit/{slug}.html'.format(slug=slug))
         page, created = Page.objects.update_or_create(slug=slug, defaults={'content': content})
+        update_index.Command().handle(using=['default'], remove=True)
         return redirect('/view/{slug}.html'.format(slug=page.get_url()))

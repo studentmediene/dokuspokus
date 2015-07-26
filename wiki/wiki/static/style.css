@@ -104,6 +104,19 @@ body {
   color: black;
 }
 
+.search form input {
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 6px 12px;
+    border-radius: 2px;
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* -------- */
+
 .markdown-body {
   border-left: 1px solid gray;
   -webkit-text-size-adjust: 100%;
