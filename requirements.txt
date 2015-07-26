@@ -7,6 +7,5 @@ haystack==0.15
 Markdown==2.6.2
 python-ptrace==0.8.1
 six==1.9.0
-unicode-slugify==0.1.3
 Unidecode==0.4.18
 Whoosh==2.7.0

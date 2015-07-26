@@ -1,5 +1,5 @@
 from django.db import models
-from slugify import slugify
+from wiki.utils.slugify import slugify
 
 
 class Page(models.Model):
