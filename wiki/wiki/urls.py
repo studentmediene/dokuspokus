@@ -10,6 +10,5 @@ urlpatterns = [
     url(r'^history/(?P<slug>[^\.]+).html$', 'wiki.views.page_history', name='page_history'),
     url(r'^history/(?P<slug>[^\.]+)/(?P<version_id>[0-9]+)$', 'wiki.views.page_change', name='page_change'),
     url(r'^search/', include('haystack.urls')),
-    # url(r'^search/', include('haystack.urls')),
-    # url(r'^edit/(?P<slug>[^\.]+).html$', 'blog.views.edit', name='edit'),
+    url(r'^delete/$', 'wiki.views.delete_page', name='delete_page'),
 ]

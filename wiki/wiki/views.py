@@ -143,3 +143,14 @@ def save_page(request, slug):
         page, created = Page.objects.update_or_create(slug=slug, defaults={'content': content})
         update_index.Command().handle(using=['default'], remove=True)
         return redirect('/view/{slug}.html'.format(slug=page.get_url()))
+
+
+@login_required(login_url='/login')
+def delete_page(request):
+    if request.method == 'POST':
+        slug = request.POST.get('slug', '')
+        print(slug)
+        if slug != '':
+            Page.objects.filter(slug=slug).delete()
+            update_index.Command().handle(using=['default'], remove=True)
+        return redirect('/')

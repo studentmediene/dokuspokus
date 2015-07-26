@@ -7,10 +7,11 @@
 
 <script src="{% static STATIC_URL %}prism-all.js"></script>
 <script src="{% static STATIC_URL %}mdedit.js"></script>
+<script src="http://vast-engineering.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
 {% endblock %}
 
 {% block content %}
-<h1>{{ page_title|title }} - {% if page %}Rediger{% else %}Opprett{% endif %}</h1>
+<h1>{{ page_title|title }} - {% if page %}Rediger <a href="#" class="delete-popup_open button">Slett</a>{% else %}Opprett{% endif %}</h1>
 <a href="{% url 'view_page' slug %}">&#8592; Tilbake</a>
 <br />
 <br />
@@ -21,15 +22,31 @@
 </form>
 <a href="{% url 'view_page' slug %}" class="button">Avbryt</a>
 
-<script>
-  var editor = mdEdit(document.querySelector("pre#content"), {});
+<div id="delete-popup">
+  <p>Er du sikker på at du vil slette '{{ page.title }}'?</p>
+  <br />
+  <a href="#" class="delete-popup_close button">Nei</a>
+  <form action="{% url 'delete_page' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="slug" value="{{ page.slug }}" />
+    <input type="submit" class="button" value="Ja" />
+  </form>
+</div>
 
-  $("#edit-form").submit( function(eventObj) {
-      $('<input />').attr('type', 'hidden')
-        .attr('name', "content")
-        .attr('value', editor.getValue())
-        .appendTo(this);
-      return true;
-    });
+<script>
+  $(document).ready(function() {
+
+    $('#delete-popup').popup();
+
+    var editor = mdEdit(document.querySelector("pre#content"), {});
+
+    $("#edit-form").submit( function(eventObj) {
+        $('<input />').attr('type', 'hidden')
+          .attr('name', "content")
+          .attr('value', editor.getValue())
+          .appendTo(this);
+        return true;
+      });
+  });
 </script>
 {% endblock %}

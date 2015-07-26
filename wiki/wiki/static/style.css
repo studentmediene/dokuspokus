@@ -66,19 +66,45 @@ body {
   padding: .5rem;
 }
 
-.markdown-body .button {
+.button {
   background: #FFF;
-  color: inherit;
+  color: inherit !important;
   border: 1px solid #CCC;
   border-radius: 2px;
+  text-decoration: none !important;
   padding: 6px 12px;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
-.markdown-body .button:hover {
+.button:hover {
   background: #EEE;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: default;
+}
+
+.markdown-body h1 a.button {
+  font-weight: normal;
+  float: right;
+}
+
+#delete-popup {
+  display: none;
+  background-color: #FFF;
+  padding: 2rem;
+  width: 250px;
+  border-radius: 2px;
+}
+
+#delete-popup p {
+  text-align: center;
+}
+
+#delete-popup form input.button {
+  float: right;
+}
+
+#delete-popup a.delete-popup_close {
+  float: left;
 }
 
 .markdown-body form#edit-form input.button{
