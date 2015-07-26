@@ -79,7 +79,7 @@ body {
 .button:hover {
   background: #EEE;
   text-decoration: none !important;
-  cursor: default;
+  cursor: pointer;
 }
 
 .markdown-body h1 a.button {

@@ -29,17 +29,14 @@
       </form>
     </div>
 
+    {% for group in link_groups %}
     <ul>
-      <li>Nyttige Linker</li>
-      <li><a href="{% url 'home_page' %}">Hjem</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li>{{ group.title|title }}</li>
+      {% for link in group.links.all %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
     </ul>
-    <ul>
-      <li>Andre Linker</li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
+    {% endfor %}
   </nav>
 
   <div class="body-wrapper">

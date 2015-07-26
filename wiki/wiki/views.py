@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from haystack.management.commands import update_index
-from wiki.models import Page
+from wiki.models import Page, LinkGroup
 from django.http import JsonResponse
 import reversion
 import reversion_compare
@@ -17,15 +17,18 @@ def home_page(request):
 
 
 def view_page(request, slug):
+    link_groups = LinkGroup.objects.all()
     try:
         page = Page.objects.get(slug=slug)
         return render(request, 'view_page.html', {
                       'page': page,
+                      'link_groups': link_groups,
                       })
     except Page.DoesNotExist:
         return render(request, 'create_page.html', {
                       'slug': slug,
                       'page_title': slug.replace('_', ' '),
+                      'link_groups': link_groups,
                       })
 
 
@@ -40,6 +43,7 @@ def login_user(request):
                 login(request, user)
                 return redirect(site)
     else:
+        link_groups = LinkGroup.objects.all()
         form = AuthenticationForm(request)
         form.fields['username'].widget.attrs.update({
                 'placeholder': 'username'
@@ -52,6 +56,7 @@ def login_user(request):
                       'form': form,
                       'next': site,
                       'request': request,
+                      'link_groups': link_groups,
                       })
 
 
@@ -64,7 +69,7 @@ def logout_user(request):
 
 @login_required(login_url='/login')
 def page_history(request, slug):
-
+    link_groups = LinkGroup.objects.all()
     page = Page.objects.get(slug=slug)
     version_list = reversion.get_unique_for_object(page)
 
@@ -89,12 +94,12 @@ def page_history(request, slug):
                   'page': page,
                   'slug': slug,
                   'changelog': changelog,
+                  'link_groups': link_groups,
                   })
 
 
 @login_required(login_url='/login')
 def page_change(request, slug, version_id):
-
     try:
         version_id = abs(int(version_id))
     except TypeError:
@@ -123,6 +128,7 @@ def page_change(request, slug, version_id):
 
 @login_required(login_url='/login')
 def edit_page(request, slug):
+    link_groups = LinkGroup.objects.all()
     try:
         page = Page.objects.get(slug=slug)
     except Page.DoesNotExist:
@@ -131,6 +137,7 @@ def edit_page(request, slug):
                   'page': page,
                   'page_title': slug.replace('_', ' '),
                   'slug': slug,
+                  'link_groups': link_groups,
                   })
 
 
