@@ -15,12 +15,7 @@
 
   <nav class="navigation">
     <div class="logo">
-      <div style="width: 92%; height: 200px; background-color: grey;text-align: center;">
-        <span style="margin-top: 80px;">Logo</span>
-      </div>
-      <!--
-      <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=150%C3%97200&w=150&h=200" />
-      -->
+      <img src="{% static STATIC_URL %}logo.png" />
     </div>
 
     <div class="search">
@@ -52,7 +47,7 @@
   </div>
 
   <footer class="footer">
-    Footer
+    &#169; {% now "Y" %} Radio Revolt
   </footer>
 
 </body>
