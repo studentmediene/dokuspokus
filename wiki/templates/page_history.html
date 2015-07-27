@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load django_markdown %}
+
+{% block head %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    function hei(id) {
+      var element = $( "p#"+id );
+      var url = '/history/{{ slug }}/' + element.parent().index();
+      var action = element.attr("class");
+
+      if (action == "expanded") {
+        element.html("");
+      } else {
+        $.getJSON( url, function( data ) {
+          element.html(data['html']);
+        });
+      }
+
+      element.toggleClass("expanded");
+
+      return false;
+    }
+  </script>
+{% endblock %}
+
+{% block content %}
+  <h1>{{ page.title }} - Historikk</h1>
+  <a href="{% url 'view_page' page.get_url %}">&#8592; Tilbake</a>
+  <br />
+  <br />
+  <ul>
+  {% for change in changelog %}
+    <li>{{ change.date|date:'d/m/y H:i' }} - {{ change.user }} ({{ change.diff }}) <a href="#"  onclick="return hei({{ change.id }});">[+]</a>
+    <p class="" id="{{ change.id }}"></p></li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}

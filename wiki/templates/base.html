@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head lang="no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static STATIC_URL %}style.css">
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <title>Radio Revolt - Wiki</title>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+
+  <nav class="navigation">
+    <div class="logo">
+      <img src="{% static STATIC_URL %}logo.png" />
+    </div>
+
+    <div class="search">
+      <form method="get" action="/search/">
+        <input name="q" type="text" placeholder="Søk..." />
+      </form>
+    </div>
+
+    {% for group in link_groups %}
+    <ul>
+      <li>{{ group.title|title }}</li>
+      {% for link in group.links.all %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </nav>
+
+  <div class="body-wrapper">
+
+    <header class="header">
+      <h1><a href="{% url 'home_page' %}">Radio Revolt Wiki</a></h1>
+    </header>
+
+    <div class="markdown-body">
+      {% block content %}{% endblock %}
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    &#169; {% now "Y" %} Radio Revolt
+  </footer>
+
+</body>
+</html>

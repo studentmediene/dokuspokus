@@ -1,0 +1,7 @@
+*.pyc
+*.DS_Store
+*.sqlite3
+migrations/
+venv/
+whoosh/
+__pycache__/
