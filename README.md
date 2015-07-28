@@ -6,22 +6,20 @@ Her er en detaljert beskrivelse på hvordan du kan kjøre systemet lokalt.
 
 ### Avhengigheter
 Før du begynner må du ha disse verktøyene:
-* __[Python][1]__ - Programmeringsspråket wikien er skrevet i.
-* __[Django][2]__ - Rammeverket som er brukt i wikien.
-* __[pip][2]__ - Et pakkeinstallasjonsprogram for Python-pakker.
-* __[git][3]__ - Et versjonshåndteringsprogram.
-* __[virtualenv][4]__ - Et program for å generere et uviklingsmiljø wikien kan kjøre i.
+* __[Python 3]__ - Programmeringsspråket wikien er skrevet i.
+* __[Django]__ - Rammeverket som er brukt i wikien.
+* __[pip]__ - Et pakkeinstallasjonsprogram for Python.
+* __[git]__ - Et versjonshåndteringsprogram.
+* __[virtualenv]__ - Et program for å generere et uviklingsmiljø wikien kan kjøre i.
 
-[1]: 
-[2]: 
-[1]: 
-[1]: 
-[1]: 
-#### Installasjon på Windows
-##### Python
-Python er programmeringsspråket wikien er skrevet i.
+[Python 3]: https://www.python.org/
+[Django]: https://www.djangoproject.com/
+[pip]: https://pip.pypa.io/
+[git]: https://git-scm.com/
+[virtualenv]: https://virtualenv.pypa.io/
 
-
+##Oppsett
+Hent kildekoden:
 ```
 $ git clone git@github.com:RadioRevolt/dokuspokus.git
 ```
@@ -60,7 +58,7 @@ Lag superbruker:
 $ python manage.py createsuperuser
 ```
 
-Det burde nå fungere å kjøre den med `python manage.py runserver`.
+Det burde nå fungere å kjøre den med `python manage.py runserver`. Du vil da kunne besøke wikien i nettleseren din på `http://localhost:8000`
 
 ## Deploy
 Vil helst ikke deploye med `python manage.py runserver`. Bedre å bruke apache til
