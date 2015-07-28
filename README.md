@@ -107,7 +107,7 @@ $ touch /srv/dokuspokus/apache/logs/access.log
 
 Lag WSGI-configurasjonsfilen '/srv/dokuspokus/apache/conf/wsgi.py':
 
-```
+```python
 import os
 import sys
 
@@ -146,7 +146,7 @@ $ chmod -R 777 /srv/dokuspokus/apache/conf/
 
 Lag en virtual host til wikien:
 
-```
+```apache
 <VirtualHost *:80>
     ServerAdmin radioteknisk@studentmediene.no
     ServerName wiki.radiorevolt.no
