@@ -2,7 +2,7 @@
 En intern wiki for Radio Revolt.
 
 ## Bidra
-Dersom du ønsker å bidra må du først sette opp systemet lokalt, se [Oppsett](/#Oppsett).
+Dersom du ønsker å bidra må du først sette opp systemet lokalt, se [Oppsett](https://github.com/RadioRevolt/dokuspokus#Oppsett).
 
 **All kode og kommentarer i koden, samt commit-meldinger, skal være på engelsk.**
 
