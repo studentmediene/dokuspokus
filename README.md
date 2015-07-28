@@ -7,6 +7,7 @@ Dersom du ønsker å bidra må du først sette opp systemet lokalt, se [Oppsett]
 **All kode og kommentarer i koden, samt commit-meldinger, skal være på engelsk.**
 
 1. Gå til [issues](https://github.com/RadioRevolt/dokuspokus/issues) og finn en du har lyst til å jobbe på.
+2. Velg helst enn fra en [milestone](https://github.com/RadioRevolt/dokuspokus/milestones) med forfall om ikke så veldig lenge.
 2. Kommenter i issuet at du jobber på det.
 3. Pass på at du er på develop-branchen lokalt.
 4. Lag en egen branch med navn: "issue - \<navn på issue\> (#\<issue ID\>)".
