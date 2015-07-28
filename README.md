@@ -18,7 +18,7 @@ Før du begynner må du ha disse verktøyene:
 [git]: https://git-scm.com/
 [virtualenv]: https://virtualenv.pypa.io/
 
-##Oppsett
+###Oppsett
 Hent kildekoden:
 ```
 $ git clone git@github.com:RadioRevolt/dokuspokus.git
