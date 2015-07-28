@@ -2,11 +2,35 @@
 En intern wiki for Radio Revolt.
 
 ## Installasjon
+Her er en detaljert beskrivelse på hvordan du kan kjøre systemet lokalt.
+
+### Avhengigheter
+Før du begynner må du ha disse verktøyene:
+* __[Python][1]__ - Programmeringsspråket wikien er skrevet i.
+* __[Django][2]__ - Rammeverket som er brukt i wikien.
+* __[pip][2]__ - Et pakkeinstallasjonsprogram for Python-pakker.
+* __[git][3]__ - Et versjonshåndteringsprogram.
+* __[virtualenv][4]__ - Et program for å generere et uviklingsmiljø wikien kan kjøre i.
+
+[1]: 
+[2]: 
+[1]: 
+[1]: 
+[1]: 
+#### Installasjon på Windows
+##### Python
+Python er programmeringsspråket wikien er skrevet i.
+
+
+```
+$ git clone git@github.com:RadioRevolt/dokuspokus.git
+```
+
 Sett opp et virituelt miljø:
 
 ```
-~$ virtualenv -p <filbane-til-python-3> venv
-~$ source venv/bin/activate
+$ virtualenv -p <filbane-til-python-3> venv
+$ source venv/bin/activate
 ```
 
 `python --version` burde gi 3.4.0 eller nyere.
@@ -15,25 +39,25 @@ Sett opp et virituelt miljø:
 Installer avhengigheter:
 
 ```
-~$ pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Bygg databasen:
 
 ```
-~$ python manage.py migrate
+$ python manage.py migrate
 ```
 
 Bygg søkeindekser:
 
 ```
-~$ python manage.py rebuild_index
+$ python manage.py rebuild_index
 ```
 
 Lag superbruker:
 
 ```
-~$ python manage.py createsuperuser
+$ python manage.py createsuperuser
 ```
 
 Det burde nå fungere å kjøre den med `python manage.py runserver`.
@@ -48,7 +72,7 @@ Alle kommandoer og filer er kun veiledene.
 Installer mod_wsgi:
 
 ```
-~$ apt-get install libapache2-mod-wsgi
+$ apt-get install libapache2-mod-wsgi
 ```
 
 Flytt dokuspokus til et fornuftig sted på serveren, f.eks. /srv/dokuspokus
@@ -79,8 +103,8 @@ mkdir /srv/dokuspokus/run/eggs/
 Opprett to log-filer:
 
 ```
-~$ touch /srv/dokuspokus/apache/logs/error.log
-~$ touch /srv/dokuspokus/apache/logs/access.log
+$ touch /srv/dokuspokus/apache/logs/error.log
+$ touch /srv/dokuspokus/apache/logs/access.log
 ```
 
 Lag WSGI-configurasjonsfilen '/srv/dokuspokus/apache/conf/wsgi.py':
@@ -103,23 +127,23 @@ application = get_wsgi_application()
 Eksporter statiske filer:
 
 ```
-~$ python manage.py collectstatic
+$ python manage.py collectstatic
 ```
 
 Lag en dokuspokus-bruker og -gruppe:
 
 ```
-~$ adduser --no-create-home dokuspokus
-~$ addgroup dokuspokus
-~$ usermod -aG dokuspokus dokuspokus
+$ adduser --no-create-home dokuspokus
+$ addgroup dokuspokus
+$ usermod -aG dokuspokus dokuspokus
 ```
 
 Endre rettighetene til dokuspokus-mappen:
 
 ```
-~$ chown -R dokuspokus:dokuspokus /srv/dokuspokus/
-~$ chmod -R 755 /srv/dokuspokus/
-~$ chmod -R 777 /srv/dokuspokus/apache/conf/
+$ chown -R dokuspokus:dokuspokus /srv/dokuspokus/
+$ chmod -R 755 /srv/dokuspokus/
+$ chmod -R 777 /srv/dokuspokus/apache/conf/
 ```
 
 Lag en virtual host til wikien:
@@ -156,7 +180,7 @@ Lag en virtual host til wikien:
 Restart apache:
 
 ```
-~$ service apache2 restart
+$ service apache2 restart
 ```
 
 Wikien burde nå være oppe og gå på wiki.radiorevolt.no
