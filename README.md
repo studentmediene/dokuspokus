@@ -4,7 +4,7 @@ En intern wiki for Radio Revolt.
 ## Bidra
 Dersom du ønsker å bidra må du først sette opp systemet lokalt, se [Oppsett](/#Oppsett).
 
-**All** kode og kommentarer i koden, samt commit-meldinger, skal være på engelsk.
+**All kode og kommentarer i koden, samt commit-meldinger, skal være på engelsk.**
 
 1. Gå til [issues](dokuspokus/issues) og finn en du har lyst til å jobbe på.
 2. Kommenter i issuet at du jobber på det.
