@@ -33,6 +33,8 @@ Før du begynner må du ha disse verktøyene:
 [virtualenv]: https://virtualenv.pypa.io/
 
 ###Oppsett
+
+#### OSX & Linux
 Hent kildekoden:
 ```
 $ git clone git@github.com:RadioRevolt/dokuspokus.git
@@ -73,6 +75,9 @@ $ python manage.py createsuperuser
 ```
 
 Det burde nå fungere å kjøre den med `python manage.py runserver`. Du vil da kunne besøke wikien i nettleseren din på `http://localhost:8000`
+
+#### Windows
+Kommer snart
 
 ## Deploy
 Vil helst ikke deploye med `python manage.py runserver`. Bedre å bruke apache til
