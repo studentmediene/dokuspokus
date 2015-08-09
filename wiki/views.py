@@ -2,12 +2,15 @@
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from haystack.management.commands import update_index
 from wiki.models import Page, LinkGroup
 from django.http import JsonResponse
+from markdown_shortcodes import shortcode
+from wiki.utils.slugify import slugify
 import reversion
 import reversion_compare
 
@@ -28,7 +31,7 @@ def view_page(request, slug):
     except Page.DoesNotExist:
         return render(request, 'create_page.html', {
                       'slug': slug,
-                      'page_title': slug.replace('_', ' '),
+                      'page_title': slug.replace('-', ' '),
                       'link_groups': link_groups,
                       })
 
@@ -162,3 +165,16 @@ def delete_page(request):
             Page.objects.filter(slug=slug).delete()
             update_index.Command().handle(using=['default'], remove=True)
         return redirect('/')
+
+
+# Shortcodes
+@shortcode
+def shortcode_side(*args):
+    link = slugify(args[0].split('#')[0].lower())
+    segment = slugify(args[0].split('#')[-1].lower()) if '#' in args[0] else ''
+    title = args[-1]
+    return render_to_string('shortcodes/link.html', {
+        'link': link,
+        'segment': segment,
+        'title': title,
+    })
