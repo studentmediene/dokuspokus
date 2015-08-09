@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'haystack',
     'reversion',
     'reversion_compare',
+    'markdown_shortcodes',
 )
 
 MIDDLEWARE_CLASSES = (
