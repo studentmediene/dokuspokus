@@ -9,7 +9,7 @@ Dersom du ønsker å bidra må du først sette opp systemet lokalt, se [Oppsett]
 1. Gå til [issues](https://github.com/RadioRevolt/dokuspokus/issues) og finn en du har lyst til å jobbe på.
 2. Kommenter i issuet at du jobber på det.
 3. Pass på at du er på develop-branchen lokalt.
-4. Lag en egen branch med navn: "issue - \<navn på issue\> (#\<issue ID\>)".
+4. Lag en egen branch med navn: "issue#\<issue ID\>".
 5. Bytt til branchen du nettopp lagde og push den til github (slik at andre kan se at du jobber på den).
 6. Når du har fikset issuet, commit endringene med følgende medling: "\<hva du har gjort\>. Fixes #\<issue ID\>"
 7. Lag en [pull request](https://github.com/RadioRevolt/dokuspokus/pulls) med branchen din, og develop-branchen som base.
