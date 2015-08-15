@@ -89,6 +89,10 @@ body {
   float: right;
 }
 
+.markdown-body a.DoesNotExist {
+  color: #C04040;
+}
+
 #delete-popup {
   display: none;
   background-color: #FFF;

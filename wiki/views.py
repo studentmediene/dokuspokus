@@ -173,8 +173,14 @@ def shortcode_side(*args):
     link = slugify(args[0].split('#')[0].lower())
     segment = slugify(args[0].split('#')[-1].lower()) if '#' in args[0] else ''
     title = args[-1]
+    try:
+        Page.objects.get(slug=link)
+        link_class = ''
+    except Page.DoesNotExist:
+        link_class = 'DoesNotExist'
     return render_to_string('shortcodes/link.html', {
         'link': link,
         'segment': segment,
         'title': title,
+        'class': link_class,
     })
