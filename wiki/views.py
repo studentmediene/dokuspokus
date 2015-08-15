@@ -2,12 +2,15 @@
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from haystack.management.commands import update_index
 from wiki.models import Page, LinkGroup
 from django.http import JsonResponse
+from markdown_shortcodes import shortcode
+from wiki.utils.slugify import slugify
 import reversion
 import reversion_compare
 
@@ -28,7 +31,7 @@ def view_page(request, slug):
     except Page.DoesNotExist:
         return render(request, 'create_page.html', {
                       'slug': slug,
-                      'page_title': slug.replace('_', ' '),
+                      'page_title': slug.replace('-', ' '),
                       'link_groups': link_groups,
                       })
 
@@ -130,13 +133,17 @@ def page_change(request, slug, version_id):
 @login_required(login_url='/login')
 def edit_page(request, slug):
     link_groups = LinkGroup.objects.all()
+    if request.GET:
+        title = request.GET.get('title', slug.replace('-', ' '))
+    else:
+        title = slug.replace('-', ' ')
     try:
         page = Page.objects.get(slug=slug)
     except Page.DoesNotExist:
         page = None
     return render(request, 'edit_page.html', {
                   'page': page,
-                  'page_title': slug.replace('_', ' '),
+                  'page_title': title,
                   'slug': slug,
                   'link_groups': link_groups,
                   })
@@ -146,9 +153,16 @@ def edit_page(request, slug):
 def save_page(request, slug):
     if request.method == 'POST':
         content = request.POST.get('content', '')
+        title = request.POST.get('title', slug.replace('-', '').title())
         if content == '':
             return redirect('/edit/{slug}.html'.format(slug=slug))
-        page, created = Page.objects.update_or_create(slug=slug, defaults={'content': content})
+        try:
+            page = Page.objects.get(slug=slug)
+            setattr(page, 'content', content)
+            page.save()
+        except Page.DoesNotExist:
+            page = Page(slug=slug, content=content, title=title)
+            page.save()
         update_index.Command().handle(using=['default'], remove=True)
         return redirect('/view/{slug}.html'.format(slug=page.get_url()))
 
@@ -162,3 +176,22 @@ def delete_page(request):
             Page.objects.filter(slug=slug).delete()
             update_index.Command().handle(using=['default'], remove=True)
         return redirect('/')
+
+
+# Shortcodes
+@shortcode
+def shortcode_side(*args):
+    link = slugify(args[0].split('#')[0].lower())
+    segment = slugify(args[0].split('#')[-1].lower()) if '#' in args[0] else ''
+    title = args[-1]
+    try:
+        Page.objects.get(slug=link)
+        link_class = ''
+    except Page.DoesNotExist:
+        link_class = 'DoesNotExist'
+    return render_to_string('shortcodes/link.html', {
+        'link': link,
+        'segment': segment,
+        'title': title,
+        'class': link_class,
+    })

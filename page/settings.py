@@ -117,16 +117,12 @@ TEMPLATE_DIRS = (
 
 # Markdown
 
-MARKDOWN_EXTENSIONS = ['extra', 'wikilinks', 'toc']
+MARKDOWN_EXTENSIONS = ['extra', 'toc']
 MARKDOWN_EXTENSION_CONFIGS = {
     'toc': {
         'separator': '-',
         'title': 'Innhold',
         'baselevel': 2,
-    },
-    'wikilinks': {
-        'base_url': '/view/',
-        'end_url': '.html',
     },
 }
 
