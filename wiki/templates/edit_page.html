@@ -11,13 +11,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ page_title|title }} - {% if page %}Rediger <a href="#" class="delete-popup_open button">Slett</a>{% else %}Opprett{% endif %}</h1>
+<h1>{{ page_title }} - {% if page %}Rediger <a href="#" class="delete-popup_open button">Slett</a>{% else %}Opprett{% endif %}</h1>
 <a href="{% url 'view_page' slug %}">&#8592; Tilbake</a>
 <br />
 <br />
 <pre id="content" name="content">{{ page.content }}</pre>
 <form method="post" id="edit-form" action="{% url 'save_page' slug %}">
   {% csrf_token %}
+  <input type="hidden" name="title" value="{{ page_title }}" />
   <input class="button" type="submit" value="Lagre" />
 </form>
 <a href="{% url 'view_page' slug %}" class="button">Avbryt</a>

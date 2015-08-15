@@ -24,7 +24,6 @@ class Page(models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = slugify(self.slug)
-            self.title = slugify(self.slug).replace('_', ' ').title()
 
         super(Page, self).save(*args, **kwargs)
 
