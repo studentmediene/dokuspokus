@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Siden <b>{{ page_title|title }}</b> finnes ikke. <a href="{% url 'edit_page' slug %}">Opprett <b>{{ page_title|title }}</b></a>.
+Siden <b>{{ page_title|title }}</b> finnes ikke.<br />
+    <form action="{% url 'edit_page' slug %}">
+        Tittel: <input type="text" name="title" value="{{ page_title|title }}"/><br />
+        <button type="submit">Opprett</button>
+    </form>
 {% endblock %}
